@@ -27,10 +27,10 @@ ScrollReveal().reveal(".header__container .section__header", {
   ...scrollRevealOption,
 });
 
-ScrollReveal().reveal(".home__btn button", {
+ScrollReveal().reveal(".home__btn .btn", {
   ...scrollRevealOption,
   origin: "left",
-  delay: 0,
+  delay: 500,
 });
 
 
@@ -49,6 +49,20 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+ScrollReveal().reveal(".collection__container .section__subheader", {
+  ...scrollRevealOption,
+});
+
+ScrollReveal().reveal(".collection__container .section__header", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".collection__container .swiper", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
 ScrollReveal().reveal(".service__container .section__subheader", {
   ...scrollRevealOption,
 });
@@ -64,7 +78,7 @@ ScrollReveal().reveal(".service__row:nth-child(2n-1) img", {
 ScrollReveal().reveal(".service__row:nth-child(2n) img", {
   ...scrollRevealOption,
   origin: "right",
-});
+}); 
 ScrollReveal().reveal(".service__details h4", {
   ...scrollRevealOption,
   delay: 500,
@@ -76,7 +90,15 @@ ScrollReveal().reveal(".service__details p", {
 });
 ScrollReveal().reveal(".service__btn", {
   ...scrollRevealOption,
-  delay: 1200,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".banner__container .section__subheader", {
+  ...scrollRevealOption,
+});
+ScrollReveal().reveal(".banner__container .section__header", {
+  ...scrollRevealOption,
+  delay: 500,
 });
 
 const instagram = document.querySelector(".instagram__images");
