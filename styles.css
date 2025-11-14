@@ -53,10 +53,15 @@
   outline: none;
   border: none;
   color: var(--white);
-  background-color: transparent;
+  background-color: var(--background-color);
   border: 2px solid var(--primary-color);
   transition: 0.3s;
   cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
 }
 
 img {
@@ -117,7 +122,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 .nav__logo a img {
@@ -141,7 +146,7 @@ nav {
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   transition: transform 0.5s;
   z-index: -1;
 }
@@ -161,7 +166,6 @@ header {
   min-height: 100vh;
   position: relative;
   isolation: isolate;
-
   background-image: url("assets/header.jpg");
   background-position: center center;
   background-size: cover;
@@ -189,6 +193,10 @@ header::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.header__container .home__btn {
+  margin-top: 2rem;
 }
 
 .collection__container {
@@ -262,7 +270,6 @@ header::before {
   display: flex;
   align-items: center;
   gap: 1rem;
-
   animation: scroll-left 30s linear infinite;
 }
 
@@ -409,6 +416,10 @@ header::before {
   }
 }
 
+.header__container .home__btn {
+  text-align: center;
+}
+
 @media (width > 768px) {
   nav {
     position: static;
@@ -473,7 +484,7 @@ header::before {
   .header__container .section__header {
     margin: 0;
     text-align: left;
-    font-size: 5rem;
+    font-size: 4.2rem;
   }
 
   .service__container :is(.section__header, .section__subheader) {

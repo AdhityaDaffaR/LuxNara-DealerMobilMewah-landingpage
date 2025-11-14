@@ -6,7 +6,10 @@ menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 
   const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-4-line");
+  menuBtnIcon.setAttribute(
+    "class",
+    isOpen ? "ri-close-line" : "ri-menu-4-line"
+  );
 });
 
 navLinks.addEventListener("click", () => {
@@ -20,12 +23,17 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
-// Header
 ScrollReveal().reveal(".header__container .section__header", {
   ...scrollRevealOption,
 });
 
-// Swiper
+ScrollReveal().reveal(".home__btn button", {
+  ...scrollRevealOption,
+  origin: "left",
+  delay: 0,
+});
+
+
 const swiper = new Swiper(".swiper", {
   loop: true,
   effect: "coverflow",
@@ -41,32 +49,42 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Layanan section
-ScrollReveal().reveal(".layanan__container .section__subheader", {
+ScrollReveal().reveal(".service__container .section__subheader", {
   ...scrollRevealOption,
 });
-ScrollReveal().reveal(".layanan__container .section__header", {
+ScrollReveal().reveal(".service__container .section__header", {
   ...scrollRevealOption,
   delay: 500,
 });
 
-ScrollReveal().reveal(".layanan__row:nth-child(2n-1) img", {
+ScrollReveal().reveal(".service__row:nth-child(2n-1) img", {
   ...scrollRevealOption,
   origin: "left",
 });
-ScrollReveal().reveal(".layanan__row:nth-child(2n) img", {
+ScrollReveal().reveal(".service__row:nth-child(2n) img", {
   ...scrollRevealOption,
   origin: "right",
 });
-ScrollReveal().reveal(".layanan__details h4", {
+ScrollReveal().reveal(".service__details h4", {
   ...scrollRevealOption,
   delay: 500,
+
 });
-ScrollReveal().reveal(".layanan__details p", {
+ScrollReveal().reveal(".service__details p", {
   ...scrollRevealOption,
   delay: 1000,
 });
-ScrollReveal().reveal(".layanan__btn", {
+ScrollReveal().reveal(".service__btn", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 1200,
+});
+
+const instagram = document.querySelector(".instagram__images");
+
+const instagramContent = Array.from(instagram.children);
+
+instagramContent.forEach((item) => {
+  const duplicateNode = item.cloneNode(true);
+  duplicateNode.setAttribute("aria-hidden", true);
+  instagram.appendChild(duplicateNode);
 });
