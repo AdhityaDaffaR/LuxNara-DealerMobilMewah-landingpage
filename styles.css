@@ -408,7 +408,7 @@ header::before {
 
 @media (width > 375px) {
   .section__header {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
