@@ -406,8 +406,14 @@ header::before {
   background-color: #1f1b1c;
 }
 
+@media (width > 375px) {
+  .section__header {
+    font-size: 2.5rem;
+  }
+}
+
 @media (width > 540px) {
-  .header__container .section__header {
+  .section__header {
     font-size: 4rem;
   }
 
@@ -484,7 +490,7 @@ header::before {
   .header__container .section__header {
     margin: 0;
     text-align: left;
-    font-size: 4.2rem;
+    font-size: 4.4rem;
   }
 
   .service__container :is(.section__header, .section__subheader) {
